@@ -1,0 +1,52 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Larry!! How was it?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "larry-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Wow."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "larry-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I really like it!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "You both of us really good guys!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Lets sing a last song!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Ok."
+		}
+	]
+}

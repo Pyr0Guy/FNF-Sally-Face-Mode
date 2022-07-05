@@ -1,0 +1,52 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "larry-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yooo, that is really cool!! Thank you boyfriend."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Right!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "No problem for ya!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "That's was really nice song."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "larry-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yes."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Ok guys, see you later!"
+		}
+	]
+}

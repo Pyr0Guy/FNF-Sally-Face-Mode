@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Gizmo_assets.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Gizmo Dancing Beat0000" x="0" y="0" width="354" height="387" frameX="0" frameY="-10" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0001" x="359" y="0" width="348" height="387" frameX="-6" frameY="-10" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0002" x="712" y="0" width="348" height="390" frameX="-6" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0003" x="1065" y="0" width="350" height="390" frameX="-5" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0004" x="1420" y="0" width="350" height="389" frameX="-5" frameY="-8" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0005" x="0" y="395" width="345" height="390" frameX="-9" frameY="-8" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0006" x="350" y="395" width="345" height="389" frameX="-9" frameY="-9" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0007" x="700" y="395" width="341" height="394" frameX="-13" frameY="-4" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0008" x="700" y="395" width="341" height="394" frameX="-13" frameY="-4" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0009" x="700" y="395" width="341" height="394" frameX="-13" frameY="-4" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0010" x="1046" y="395" width="337" height="396" frameX="-17" frameY="-2" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0011" x="1046" y="395" width="337" height="396" frameX="-17" frameY="-2" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0012" x="1046" y="395" width="337" height="396" frameX="-17" frameY="-2" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0013" x="1388" y="395" width="340" height="398" frameX="-14" frameY="0" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0014" x="1388" y="395" width="340" height="398" frameX="-14" frameY="0" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0015" x="0" y="798" width="349" height="388" frameX="-5" frameY="-9" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0016" x="0" y="798" width="349" height="388" frameX="-5" frameY="-9" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0017" x="354" y="798" width="347" height="391" frameX="-7" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0018" x="706" y="798" width="347" height="391" frameX="-7" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0019" x="1058" y="798" width="347" height="390" frameX="-7" frameY="-8" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0020" x="1410" y="798" width="349" height="390" frameX="-5" frameY="-8" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0021" x="0" y="1194" width="349" height="391" frameX="-5" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0022" x="354" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0023" x="354" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0024" x="354" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0025" x="709" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0026" x="709" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0027" x="709" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0028" x="1064" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+	<SubTexture name="Gizmo Dancing Beat0029" x="1064" y="1194" width="350" height="391" frameX="-4" frameY="-7" frameWidth="355" frameHeight="398"/>
+</TextureAtlas>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="speech_bubble.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="speech bubble normal0000" x="0" y="0" width="1280" height="442" frameX="0" frameY="0" frameWidth="1280" frameHeight="442"/>
+</TextureAtlas>

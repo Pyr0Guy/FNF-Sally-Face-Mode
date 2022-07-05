@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Ok."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Larry and Sally, do you want to sing together?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "What you mean together?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "2 vs 1"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "larry-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I think that's unfair for ya."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Larry facts."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Dont worry, i handle this."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "larry-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Ok."
+		}
+	]
+}

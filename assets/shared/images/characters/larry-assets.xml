@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="larry-assets.png">
+	<!-- Created with Adobe Animate version 20.0.3.25487 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="larry down0000" x="0" y="0" width="346" height="825" frameX="-3" frameY="-1" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0001" x="0" y="0" width="346" height="825" frameX="-3" frameY="-1" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0002" x="346" y="0" width="360" height="826"/>
+	<SubTexture name="larry down0003" x="346" y="0" width="360" height="826"/>
+	<SubTexture name="larry down0004" x="706" y="0" width="356" height="824" frameX="-1" frameY="-2" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0005" x="706" y="0" width="356" height="824" frameX="-1" frameY="-2" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0006" x="706" y="0" width="356" height="824" frameX="-1" frameY="-2" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0007" x="706" y="0" width="356" height="824" frameX="-1" frameY="-2" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0008" x="706" y="0" width="356" height="824" frameX="-1" frameY="-2" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry down0009" x="706" y="0" width="356" height="824" frameX="-1" frameY="-2" frameWidth="360" frameHeight="826"/>
+	<SubTexture name="larry idle0000" x="1062" y="0" width="354" height="858" frameX="0" frameY="-7" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0001" x="1416" y="0" width="358" height="856" frameX="-1" frameY="-9" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0002" x="1416" y="0" width="358" height="856" frameX="-1" frameY="-9" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0003" x="1774" y="0" width="332" height="853" frameX="-20" frameY="-12" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0004" x="1774" y="0" width="332" height="853" frameX="-20" frameY="-12" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0005" x="2106" y="0" width="333" height="852" frameX="-14" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0006" x="2106" y="0" width="333" height="852" frameX="-14" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0007" x="2439" y="0" width="316" height="852" frameX="-32" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0008" x="2439" y="0" width="316" height="852" frameX="-32" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0009" x="2755" y="0" width="315" height="851" frameX="-32" frameY="-14" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0010" x="2755" y="0" width="315" height="851" frameX="-32" frameY="-14" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0011" x="2755" y="0" width="315" height="851" frameX="-32" frameY="-14" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0012" x="3070" y="0" width="314" height="854" frameX="-37" frameY="-11" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0013" x="3384" y="0" width="323" height="854" frameX="-44" frameY="-12" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0014" x="3384" y="0" width="323" height="854" frameX="-44" frameY="-12" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0015" x="3707" y="0" width="316" height="848" frameX="-53" frameY="-18" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0016" x="3707" y="0" width="316" height="848" frameX="-53" frameY="-18" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0017" x="0" y="858" width="302" height="856" frameX="-54" frameY="-10" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0018" x="0" y="858" width="302" height="856" frameX="-54" frameY="-10" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0019" x="302" y="858" width="307" height="866" frameX="-47" frameY="0" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0020" x="302" y="858" width="307" height="866" frameX="-47" frameY="0" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0021" x="609" y="858" width="310" height="863" frameX="-43" frameY="-3" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0022" x="609" y="858" width="310" height="863" frameX="-43" frameY="-3" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0023" x="919" y="858" width="307" height="856" frameX="-45" frameY="-10" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0024" x="919" y="858" width="307" height="856" frameX="-45" frameY="-10" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0025" x="1226" y="858" width="309" height="853" frameX="-42" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0026" x="1226" y="858" width="309" height="853" frameX="-42" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0027" x="1226" y="858" width="309" height="853" frameX="-42" frameY="-13" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry idle0028" x="1535" y="858" width="318" height="855" frameX="-23" frameY="-11" frameWidth="369" frameHeight="866"/>
+	<SubTexture name="larry left0000" x="1853" y="858" width="361" height="841" frameX="-4" frameY="-3" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0001" x="1853" y="858" width="361" height="841" frameX="-4" frameY="-3" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0002" x="2214" y="858" width="354" height="843" frameX="0" frameY="-1" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0003" x="2214" y="858" width="354" height="843" frameX="0" frameY="-1" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0004" x="2568" y="858" width="352" height="843" frameX="-2" frameY="-2" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0005" x="2568" y="858" width="352" height="843" frameX="-2" frameY="-2" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0006" x="2920" y="858" width="349" height="845" frameX="-3" frameY="0" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0007" x="2920" y="858" width="349" height="845" frameX="-3" frameY="0" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0008" x="2920" y="858" width="349" height="845" frameX="-3" frameY="0" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry left0009" x="2920" y="858" width="349" height="845" frameX="-3" frameY="0" frameWidth="365" frameHeight="845"/>
+	<SubTexture name="larry right0000" x="3269" y="858" width="366" height="842" frameX="0" frameY="-3" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0001" x="3269" y="858" width="366" height="842" frameX="0" frameY="-3" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0002" x="3635" y="858" width="380" height="845" frameX="-10" frameY="0" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0003" x="3635" y="858" width="380" height="845" frameX="-10" frameY="0" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0004" x="0" y="1724" width="375" height="840" frameX="-10" frameY="-6" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0005" x="0" y="1724" width="375" height="840" frameX="-10" frameY="-6" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0006" x="375" y="1724" width="375" height="844" frameX="-10" frameY="-2" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0007" x="375" y="1724" width="375" height="844" frameX="-10" frameY="-2" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0008" x="375" y="1724" width="375" height="844" frameX="-10" frameY="-2" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry right0009" x="375" y="1724" width="375" height="844" frameX="-10" frameY="-2" frameWidth="390" frameHeight="846"/>
+	<SubTexture name="larry up0000" x="750" y="1724" width="344" height="859" frameX="-4" frameY="-9" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0001" x="750" y="1724" width="344" height="859" frameX="-4" frameY="-9" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0002" x="1094" y="1724" width="355" height="869"/>
+	<SubTexture name="larry up0003" x="1094" y="1724" width="355" height="869"/>
+	<SubTexture name="larry up0004" x="1449" y="1724" width="350" height="864" frameX="-3" frameY="-5" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0005" x="1449" y="1724" width="350" height="864" frameX="-3" frameY="-5" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0006" x="1799" y="1724" width="345" height="860" frameX="-7" frameY="-9" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0007" x="1799" y="1724" width="345" height="860" frameX="-7" frameY="-9" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0008" x="1799" y="1724" width="345" height="860" frameX="-7" frameY="-9" frameWidth="355" frameHeight="869"/>
+	<SubTexture name="larry up0009" x="1799" y="1724" width="345" height="860" frameX="-7" frameY="-9" frameWidth="355" frameHeight="869"/>
+</TextureAtlas>

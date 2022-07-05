@@ -1,0 +1,52 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Wow, that's really nice!"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Really? Thank you"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Hmmm. Maybe we should do another song?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I dont know. I little tired of it."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "sally-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Boyfriend, can you rap battle my friend?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bf-sf-dia",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Oh, sure!"
+		}
+	]
+}

@@ -21,6 +21,7 @@ import flixel.addons.effects.FlxTrailArea;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxWaveEffect;
 import flixel.addons.transition.FlxTransitionableState;
+import flixel.util.FlxArrayUtil;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -445,48 +446,41 @@ class PlayState extends MusicBeatState
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
 
-		//var numf:Float = Assets.getText(Paths.stageJson(curStage , nameFile));
-		//Std.parseFloat
+		//var abob:Array<Array<String>> = getCords('bg');
+		//var abob2:Array<String> = FlxArrayUtil.flatten2DArray(abob);
+		//var bg_cords:Array<Float> = abob2.map(Std.parseFloat);
+		
 		switch (curStage)
 		{
 			case 'podval': //SallyWeek 1
 				GameOverSubstate.characterName = 'bf-sf';
 
-				//КАК БЛЯТЬ ЗАПИСЫВАТЬ 2 ЗНАЧЕНИЯ В ЕБУЧИЙ БЛОКНОТ????
-				var bg_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'bg_x')));
-				var bg_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'bg_y')));
+				//КАК БЛЯТЬ ЗАПИСЫВАТЬ 2 ЗНАЧЕНИЯ В ЕБУЧИЙ БЛОКНОТ???? -- 08.07.2022 
+				//Неважно я понял -- 09.07.2022 
+				var bgP:Array<Float> 		= getCords('bg');
+				var florP:Array<Float> 		= getCords('flor');
+				var someStaffP:Array<Float> = getCords('someStaff');
+				var catP:Array<Float>		= getCords('cat');
+				var provodP:Array<Float> 	= getCords('provod');
+				var huinaP:Array<Float>		= getCords('huina');
 
-				var flor_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'flor_x')));
-				var flor_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'flor_y')));
-
-				var someStaff_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'someStaff_x')));
-				var someStaff_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'someStaff_y')));
-
-				var cat_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'cat_x')));
-				var cat_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'cat_y')));
-
-				var provod_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'provod_x')));
-				var provod_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'provod_y')));
-
-				var huina_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'huina_x')));
-				var huina_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'huina_y')));
 			
-				var bg:BGSprite = new BGSprite('undeground/bg', bg_x, bg_y, 0.9, 0.9);
+				var bg:BGSprite = new BGSprite('undeground/bg', bgP[0], bgP[1], 0.9, 0.9);
 				bg.updateHitbox();
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				add(bg);
 
-				var flor:BGSprite = new BGSprite('undeground/flor', flor_x, flor_y, 0.9, 0.9);
+				var flor:BGSprite = new BGSprite('undeground/flor', florP[0], florP[1], 0.9, 0.9);
 				flor.updateHitbox();
 				flor.antialiasing = ClientPrefs.globalAntialiasing;
 				add(flor);
 
-				var someStaff:BGSprite = new BGSprite('undeground/someStaff', someStaff_x, someStaff_y, 0.9, 0.9);
+				var someStaff:BGSprite = new BGSprite('undeground/someStaff', someStaffP[0], someStaffP[1], 0.9, 0.9);
 				someStaff.updateHitbox();
 				someStaff.antialiasing = ClientPrefs.globalAntialiasing;
 				add(someStaff);
 
-				cat = new FlxSprite(cat_x, cat_y);
+				cat = new FlxSprite(400, 250);
 				cat.frames = Paths.getSparrowAtlas('characters/Gizmo_assets','shared');
 				cat.animation.addByPrefix('shit', "Gizmo Dancing Beat", 24, false);
 				cat.antialiasing = ClientPrefs.globalAntialiasing;
@@ -495,12 +489,12 @@ class PlayState extends MusicBeatState
 				add(cat);
 				
 
-				var provod:BGSprite = new BGSprite('undeground/fg-provod', provod_x, provod_y,  1.3, 1.3);
+				var provod:BGSprite = new BGSprite('undeground/fg-provod', provodP[0], provodP[1],  1.3, 1.3);
 				provod.updateHitbox();
 				provod.antialiasing= ClientPrefs.globalAntialiasing;
 				add(provod);
 
-				var huina:BGSprite = new BGSprite('undeground/fg-huina', huina_x, huina_y,  1.2, 1.2);
+				var huina:BGSprite = new BGSprite('undeground/fg-huina', huinaP[0], huinaP[1],  1.2, 1.2);
 				huina.updateHitbox();
 				huina.antialiasing = ClientPrefs.globalAntialiasing;
 				add(huina);
@@ -1378,6 +1372,30 @@ class PlayState extends MusicBeatState
 			}
 		}
 		CustomFadeTransition.nextCamera = camOther;
+	}
+
+	function getFile(file:String = ''):Array<Array<String>>
+	{
+		var allTxt:String = Assets.getText(Paths.stageData(curStage , file));
+			
+		var firstArray:Array<String> = allTxt.split('\n');
+		var splitArray:Array<Array<String>> = [];
+			
+		for (i in firstArray)
+		{
+			splitArray.push(i.split('/'));
+		}
+		
+		return splitArray;
+	}
+	
+	function getCords(realFile:String = '') {
+		var getFile:Array<Array<String>> = getFile(realFile);
+	
+		var oneArray:Array<String> = FlxArrayUtil.flatten2DArray(getFile);
+		var cords:Array<Float> = oneArray.map(Std.parseFloat);
+	
+		return cords;
 	}
 
 	function set_songSpeed(value:Float):Float

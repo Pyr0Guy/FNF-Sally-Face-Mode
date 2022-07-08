@@ -166,9 +166,19 @@ class Paths
 		return getPath('data/$key.txt', TEXT, library);
 	}
 
+	inline static public function stageData(stageName:String, key:String, ?library:String)
+	{
+		return getPath('stages/$stageName/$key.txt', TEXT, library);
+	}
+
 	inline static public function xml(key:String, ?library:String)
 	{
 		return getPath('data/$key.xml', TEXT, library);
+	}
+
+	inline static public function stageJson(stageName:String, key:String, ?library:String)
+	{
+		return getPath('stages/$stageName/$key.txt', TEXT, library);
 	}
 
 	inline static public function json(key:String, ?library:String)

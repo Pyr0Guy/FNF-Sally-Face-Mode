@@ -445,27 +445,48 @@ class PlayState extends MusicBeatState
 		dadGroup = new FlxSpriteGroup(DAD_X, DAD_Y);
 		gfGroup = new FlxSpriteGroup(GF_X, GF_Y);
 
+		//var numf:Float = Assets.getText(Paths.stageJson(curStage , nameFile));
+		//Std.parseFloat
 		switch (curStage)
 		{
 			case 'podval': //SallyWeek 1
 				GameOverSubstate.characterName = 'bf-sf';
 
-				var bg:BGSprite = new BGSprite('undeground/bg', -1150, -650, 0.9, 0.9);
+				//КАК БЛЯТЬ ЗАПИСЫВАТЬ 2 ЗНАЧЕНИЯ В ЕБУЧИЙ БЛОКНОТ????
+				var bg_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'bg_x')));
+				var bg_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'bg_y')));
+
+				var flor_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'flor_x')));
+				var flor_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'flor_y')));
+
+				var someStaff_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'someStaff_x')));
+				var someStaff_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'someStaff_y')));
+
+				var cat_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'cat_x')));
+				var cat_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'cat_y')));
+
+				var provod_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'provod_x')));
+				var provod_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'provod_y')));
+
+				var huina_x:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'huina_x')));
+				var huina_y:Float = Std.parseFloat(Assets.getText(Paths.stageData(curStage , 'huina_y')));
+			
+				var bg:BGSprite = new BGSprite('undeground/bg', bg_x, bg_y, 0.9, 0.9);
 				bg.updateHitbox();
 				bg.antialiasing = ClientPrefs.globalAntialiasing;
 				add(bg);
 
-				var flor:BGSprite = new BGSprite('undeground/flor', -850, -550, 0.9, 0.9);
+				var flor:BGSprite = new BGSprite('undeground/flor', flor_x, flor_y, 0.9, 0.9);
 				flor.updateHitbox();
 				flor.antialiasing = ClientPrefs.globalAntialiasing;
 				add(flor);
 
-				var someStaff:BGSprite = new BGSprite('undeground/someStaff', -850, -550, 0.9, 0.9);
+				var someStaff:BGSprite = new BGSprite('undeground/someStaff', someStaff_x, someStaff_y, 0.9, 0.9);
 				someStaff.updateHitbox();
 				someStaff.antialiasing = ClientPrefs.globalAntialiasing;
 				add(someStaff);
 
-				cat = new FlxSprite(400, 250);
+				cat = new FlxSprite(cat_x, cat_y);
 				cat.frames = Paths.getSparrowAtlas('characters/Gizmo_assets','shared');
 				cat.animation.addByPrefix('shit', "Gizmo Dancing Beat", 24, false);
 				cat.antialiasing = ClientPrefs.globalAntialiasing;
@@ -474,12 +495,12 @@ class PlayState extends MusicBeatState
 				add(cat);
 				
 
-				var provod:BGSprite = new BGSprite('undeground/fg-provod', -700, -180,  1.3, 1.3);
+				var provod:BGSprite = new BGSprite('undeground/fg-provod', provod_x, provod_y,  1.3, 1.3);
 				provod.updateHitbox();
 				provod.antialiasing= ClientPrefs.globalAntialiasing;
 				add(provod);
 
-				var huina:BGSprite = new BGSprite('undeground/fg-huina', -600, -680,  1.2, 1.2);
+				var huina:BGSprite = new BGSprite('undeground/fg-huina', huina_x, huina_y,  1.2, 1.2);
 				huina.updateHitbox();
 				huina.antialiasing = ClientPrefs.globalAntialiasing;
 				add(huina);
@@ -1181,7 +1202,7 @@ class PlayState extends MusicBeatState
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
 		botplayTxt.visible = cpuControlled;
-		add(botplayTxt);
+		//add(botplayTxt);
 		if(ClientPrefs.downScroll) {
 			botplayTxt.y = timeBarBG.y - 78;
 		}

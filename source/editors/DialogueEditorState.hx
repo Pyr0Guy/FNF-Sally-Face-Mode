@@ -38,6 +38,7 @@ class DialogueEditorState extends MusicBeatState
 	var character:DialogueCharacter;
 	var box:FlxSprite;
 	var daText:Alphabet;
+	var daName:Alphabet;
 
 	var selectedText:FlxText;
 	var animText:FlxText;
@@ -53,6 +54,7 @@ class DialogueEditorState extends MusicBeatState
 			portrait: DialogueCharacter.DEFAULT_CHARACTER,
 			expression: 'talk',
 			text: DEFAULT_TEXT,
+			name: DEFAULT_NAME,
 			boxState: DEFAULT_BUBBLETYPE,
 			speed: 0.05,
 			sound: ''
@@ -119,6 +121,7 @@ class DialogueEditorState extends MusicBeatState
 
 	var characterInputText:FlxUIInputText;
 	var lineInputText:FlxUIInputText;
+	var lineInputName:FlxUIInputText;
 	var angryCheckbox:FlxUICheckBox;
 	var speedStepper:FlxUINumericStepper;
 	var soundInputText:FlxUIInputText;
@@ -144,7 +147,10 @@ class DialogueEditorState extends MusicBeatState
 		lineInputText = new FlxUIInputText(10, soundInputText.y + 35, 200, DEFAULT_TEXT, 8);
 		blockPressWhileTypingOn.push(lineInputText);
 
-		var loadButton:FlxButton = new FlxButton(20, lineInputText.y + 25, "Load Dialogue", function() {
+		lineInputName = new FlxUIInputText(10, lineInputText.y + 35, 200, DEFAULT_NAME, 8);
+		blockPressWhileTypingOn.push(lineInputName);
+
+		var loadButton:FlxButton = new FlxButton(20, lineInputName.y + 25, "Load Dialogue", function() {
 			loadDialogue();
 		});
 		var saveButton:FlxButton = new FlxButton(loadButton.x + 120, loadButton.y, "Save Dialogue", function() {
@@ -155,11 +161,13 @@ class DialogueEditorState extends MusicBeatState
 		tab_group.add(new FlxText(10, characterInputText.y - 18, 0, 'Character:'));
 		tab_group.add(new FlxText(10, soundInputText.y - 18, 0, 'Sound file name:'));
 		tab_group.add(new FlxText(10, lineInputText.y - 18, 0, 'Text:'));
+		tab_group.add(new FlxText(10, lineInputName.y - 18, 0, 'Name:'));
 		tab_group.add(characterInputText);
 		tab_group.add(angryCheckbox);
 		tab_group.add(speedStepper);
 		tab_group.add(soundInputText);
 		tab_group.add(lineInputText);
+		tab_group.add(lineInputName);
 		tab_group.add(loadButton);
 		tab_group.add(saveButton);
 		UI_box.addGroup(tab_group);
@@ -169,6 +177,7 @@ class DialogueEditorState extends MusicBeatState
 		var copyLine:DialogueLine = {
 			portrait: defaultLine.portrait,
 			expression: defaultLine.expression,
+			name: defaultLine.name,
 			text: defaultLine.text,
 			boxState: defaultLine.boxState,
 			speed: defaultLine.speed,
@@ -226,6 +235,7 @@ class DialogueEditorState extends MusicBeatState
 	}
 
 	private static var DEFAULT_TEXT:String = "coolswag";
+	private static var DEFAULT_NAME:String = "yo mama";
 	private static var DEFAULT_SPEED:Float = 0.05;
 	private static var DEFAULT_BUBBLETYPE:String = "normal";
 	function reloadText(speed:Float = 0.05) {
@@ -236,13 +246,26 @@ class DialogueEditorState extends MusicBeatState
 			daText.destroy();
 		}
 
+		if(daName != null) {
+			daName.killTheTimer();
+			daName.kill();
+			remove(daName);
+			daName.destroy();
+		}
+
 		if(Math.isNaN(speed) || speed < 0.001) speed = 0.0;
 
 		var textToType:String = lineInputText.text;
 		if(textToType == null || textToType.length < 1) textToType = ' ';
+
+		var nameToExist:String = lineInputName.text;
+		if(nameToExist == null || nameToExist.length < 1) nameToExist = ' ';
 	
 		Alphabet.setDialogueSound(soundInputText.text);
-		daText = new Alphabet(DialogueBoxPsych.DEFAULT_TEXT_X, DialogueBoxPsych.DEFAULT_TEXT_Y, textToType, false, true, speed, 0.7);
+		daName = new Alphabet(DialogueBoxPsych.DEFAULT_NAME_X, DialogueBoxPsych.DEFAULT_NAME_Y, textToType, false, true, speed, 0.7);
+		add(daName);
+
+		daText = new Alphabet(DialogueBoxPsych.DEFAULT_TEXT_X, DialogueBoxPsych.DEFAULT_TEXT_Y, nameToExist, false, true, speed, 0.5);
 		add(daText);
 
 		if(speed > 0) {
@@ -403,6 +426,7 @@ class DialogueEditorState extends MusicBeatState
 		var curDialogue:DialogueLine = dialogueFile.dialogue[curSelected];
 		characterInputText.text = curDialogue.portrait;
 		lineInputText.text = curDialogue.text;
+		lineInputName.text = curDialogue.name;
 		angryCheckbox.checked = (curDialogue.boxState == 'angry');
 		speedStepper.value = curDialogue.speed;
 

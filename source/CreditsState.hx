@@ -82,11 +82,9 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Funkin Lobby Team'],
-			['Limb0rmx',		'limb0rx',		'Creator',							    '',	'f8a034'],
-			['levelcxdeisfail',	'levelcxdeisfail','Deputy Head, Musician',				'https://www.youtube.com/c/levelcxdeisfail',	'fff38e'],
-			['Naisonji',		'naisonji',		'Main Artist, Charter, Animatior',		'',	'57b7a6'],
-			['PyroGuy',			'pyroguy',		'Main Coder',							'https://www.youtube.com/channel/UCAoXP48PAkYtB0MfTch_yhA',	'aa9683'],
-			['TNKYBA',			'TNKYBA',		'Dialogues',							'',	'8edde7'],
+			['levelcxdeisfail',	    'levelcxdeisfail',	'Deputy Head, Musician',				'https://www.youtube.com/c/levelcxdeisfail',				'fff38e'],
+			['Naisonji',			'naisonji',		  	'Main Artist, Charter, Animatior',	'',																'57b7a6'],
+			['PyroGuy',				'pyroguy',		  	'Main Coder',							'https://www.youtube.com/channel/UCAoXP48PAkYtB0MfTch_yhA',	'aa9683'],
 			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],

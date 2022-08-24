@@ -46,6 +46,7 @@ typedef DialogueFile = {
 
 typedef DialogueLine = {
 	var portrait:Null<String>;
+	var name:Null<String>;
 	var expression:Null<String>;
 	var text:Null<String>;
 	var boxState:Null<String>;
@@ -173,6 +174,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 	var bgFade:FlxSprite = null;
 	var box:FlxSprite;
 	var textToType:String = '';
+	var nameType:String = '';
 
 	var arrayCharacters:Array<DialogueCharacter> = [];
 
@@ -199,10 +201,13 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		bgFade.alpha = 0;
 		add(bgFade);
 
+		//daName = new Alphabet(DEFAULT_NAME_X, DEFAULT_NAME_Y, nameType, false, true, 1, 0.7);
+		//add(daName);
+
 		this.dialogueList = dialogueList;
 		spawnCharacters();
 
-		box = new FlxSprite(30, 370);
+		box = new FlxSprite(10, 370);
 		box.frames = Paths.getSparrowAtlas('speech_bubble');
 		box.scrollFactor.set();
 		box.antialiasing = ClientPrefs.globalAntialiasing;
@@ -216,7 +221,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		box.animation.addByPrefix('center-angryOpen', 'speech bubble Middle loud open', 24, false);
 		box.animation.play('normal', true);
 		box.visible = false;
-		box.setGraphicSize(Std.int(box.width * 0.9));
+		box.setGraphicSize(Std.int(box.width * 0.8));
 		box.updateHitbox();
 		add(box);
 
@@ -253,6 +258,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			char.updateHitbox();
 			char.scrollFactor.set();
 			char.alpha = 0.00001;
+			char.visible = false; //Я не буду из за этого все переписывать и убирать персонажей, мне лень!
 			add(char);
 
 			var saveY:Bool = false;
@@ -276,10 +282,14 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		}
 	}
 
-	public static var DEFAULT_TEXT_X = 50;
-	public static var DEFAULT_TEXT_Y = 430;
+	public static var DEFAULT_TEXT_X = 90;
+	public static var DEFAULT_TEXT_Y = 470;
+
+	public static var DEFAULT_NAME_X = 90;
+	public static var DEFAULT_NAME_Y = 430;
 	var scrollSpeed = 4500;
 	var daText:Alphabet = null;
+	var daName:Alphabet = null;
 	var ignoreThisFrame:Bool = true; //First frame is reserved for loading dialogue images
 	override function update(elapsed:Float)
 	{
@@ -289,11 +299,26 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			return;
 		}
 
+		//var daName = new Alphabet(DEFAULT_NAME_X, DEFAULT_NAME_Y, nameType, false, false, 0, 0.7);
+		//add(daName);
+
 		if(!dialogueEnded) {
 			bgFade.alpha += 0.5 * elapsed;
 			if(bgFade.alpha > 0.5) bgFade.alpha = 0.5;
 
 			if(PlayerSettings.player1.controls.ACCEPT) {
+				
+				if(daName != null) {
+					daName.killTheTimer();
+					daName.kill();
+					remove(daName);
+					daName.destroy();
+				}
+				
+					
+				daName = new Alphabet(DEFAULT_NAME_X, DEFAULT_NAME_Y, nameType, false, true, 0, 0.7);
+				add(daName);
+
 				if(!daText.finishedText) {
 					if(daText != null) {
 						daText.killTheTimer();
@@ -301,7 +326,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 						remove(daText);
 						daText.destroy();
 					}
-					daText = new Alphabet(DEFAULT_TEXT_X, DEFAULT_TEXT_Y, textToType, false, true, 0.0, 0.7);
+					daText = new Alphabet(DEFAULT_TEXT_X, DEFAULT_TEXT_Y, textToType, false, true, 0.0, 0.5);
 					add(daText);
 					
 					if(skipDialogueThing != null) {
@@ -325,6 +350,11 @@ class DialogueBoxPsych extends FlxSpriteGroup
 					remove(daText);
 					daText.destroy();
 					daText = null;
+
+					daName.kill();
+					remove(daName);
+					daName.destroy();
+					daName = null;
 					updateBoxOffsets(box);
 					FlxG.sound.music.fadeOut(1, 0);
 				} else {
@@ -493,9 +523,22 @@ class DialogueBoxPsych extends FlxSpriteGroup
 			daText.destroy();
 		}
 
+		if(daName != null) {
+			daName.killTheTimer();
+			daName.kill();
+			remove(daName);
+			daName.destroy();
+		}
+
 		textToType = curDialogue.text;
+		nameType = curDialogue.name;
+		
 		Alphabet.setDialogueSound(curDialogue.sound);
-		daText = new Alphabet(DEFAULT_TEXT_X, DEFAULT_TEXT_Y, textToType, false, true, curDialogue.speed, 0.7);
+		
+		daName = new Alphabet(DEFAULT_NAME_X, DEFAULT_NAME_Y, nameType, false, true, 0, 0.7);
+		add(daName);
+
+		daText = new Alphabet(DEFAULT_TEXT_X, DEFAULT_TEXT_Y, textToType, false, true, curDialogue.speed, 0.6);
 		add(daText);
 
 		var char:DialogueCharacter = arrayCharacters[character];

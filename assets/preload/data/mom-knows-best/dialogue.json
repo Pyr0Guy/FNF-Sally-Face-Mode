@@ -5,6 +5,7 @@
 			"speed": 0.05,
 			"portrait": "larry-dia",
 			"boxState": "normal",
+			"name" : "Larry",
 			"expression": "talk",
 			"text": "Hello there, boy with blue hair holding a mircophone. My name is Larry, nice to meet ya."
 		},
@@ -12,6 +13,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "bf-sf-dia",
+			"name" : "Boyfriend",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Hi"
@@ -21,6 +23,7 @@
 			"speed": 0.05,
 			"portrait": "larry-dia",
 			"boxState": "normal",
+			"name" : "Larry",
 			"expression": "talk",
 			"text": "You want to rap with me?"
 		},
@@ -28,6 +31,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "bf-sf-dia",
+			"name" : "Boyfriend",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Yes! Why not, your friend said i should rap you!"
@@ -36,6 +40,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "larry-dia",
+			"name" : "Larry",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Ugh."
@@ -44,6 +49,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "larry-dia",
+			"name" : "Larry",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Ok, but only ONE song."

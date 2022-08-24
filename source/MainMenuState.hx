@@ -36,8 +36,8 @@ class MainMenuState extends MusicBeatState
 	var optionShit:Array<String> = [
 		'story_mode',
 		'freeplay',
-		'credits',
-		'options'
+		'options',
+		'credits'
 	];
 
 	var magenta:FlxSprite;
@@ -107,7 +107,7 @@ class MainMenuState extends MusicBeatState
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(0, (i * 140)  + offset);
+			var menuItem:FlxSprite = new FlxSprite(0, ((i * 140)  + offset) - 60);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
@@ -127,12 +127,14 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
+		/*
 		menu_rain = new FlxSprite();
 		menu_rain.frames = Paths.getSparrowAtlas('menu_rain');
 		menu_rain.animation.addByIndices('rainAnim', 'rain', [0, 1, 2, 3, 4, 5, 6], "", 8, false);
 		menu_rain.antialiasing = ClientPrefs.globalAntialiasing;
 		menu_rain.scrollFactor.set(0,0);
 		add(menu_rain);
+		*/
 
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -177,7 +179,7 @@ class MainMenuState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 
-		menu_rain.animation.play('rainAnim');
+		//menu_rain.animation.play('rainAnim');
 
 		if (FlxG.sound.music.volume < 0.8)
 		{

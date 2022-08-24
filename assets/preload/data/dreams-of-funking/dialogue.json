@@ -4,6 +4,7 @@
 			"sound": "",
 			"speed": 0.055,
 			"portrait": "sally-dia",
+			"name": "Sally Face",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": " Oh, hello there"
@@ -12,6 +13,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "bf-sf-dia",
+			"name": "Boyfriend",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Hello"
@@ -20,6 +22,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "sally-dia",
+			"name": "Sally Face",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "For what you there?"
@@ -28,6 +31,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "bf-sf-dia",
+			"name": "Boyfriend",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Rap battle me!"
@@ -36,6 +40,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "sally-dia",
+			"name": "Sally Face",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Rap battle?"
@@ -44,6 +49,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "sally-dia",
+			"name": "Sally Face",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": " Never did that, but i can try."
@@ -52,6 +58,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "bf-sf-dia",
+			"name": "Boyfriend",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Just take bars! And all be good."
@@ -60,6 +67,7 @@
 			"sound": "",
 			"speed": 0.05,
 			"portrait": "sally-dia",
+			"name": "Sally Face",
 			"boxState": "normal",
 			"expression": "talk",
 			"text": "Ok, to the point."

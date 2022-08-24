@@ -1020,6 +1020,14 @@ class PlayState extends MusicBeatState
 		doof.nextDialogueThing = startNextDialogue;
 		doof.skipDialogueThing = skipDialogue;
 
+		var doof2:DialogueBoxCool = new DialogueBoxCool(false, dialogue);
+		// doof.x += 70;
+		// doof.y = FlxG.height * 0.5;
+		doof2.scrollFactor.set();
+		doof2.finishThing = startCountdown;
+		doof2.nextDialogueThing = startNextDialogue;
+		doof2.skipDialogueThing = skipDialogue;
+
 		Conductor.songPosition = -5000;
 
 		strumLine = new FlxSprite(ClientPrefs.middleScroll ? STRUM_X_MIDDLESCROLL : STRUM_X, 50).makeGraphic(FlxG.width, 10);
@@ -1214,6 +1222,7 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+		doof2.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1314,8 +1323,8 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 				case 'dreams-of-funking' | 'mom-knows-best' | 'together':
-					startDialogue(dialogueJson);
-					//startDialogue(doof);
+					//startDialogue(dialogueJson);
+					startDialogueCool(doof2);
 					
 				default:
 					startCountdown();
@@ -1693,6 +1702,16 @@ class PlayState extends MusicBeatState
 				remove(black);
 			}
 		});
+	}
+
+	function startDialogueCool(?dialogueBox:DialogueBoxCool):Void
+	{
+		if(dialogueBox != null)
+		{
+			add(dialogueBox);
+		}
+		else
+			startCountdown();
 	}
 
 	function tankIntro()

@@ -157,6 +157,16 @@ class DialogueBoxCool extends FlxSpriteGroup
 		
 		nameLoL.text = curCharacter;
 
+		switch(curCharacter)
+		{
+			case 'BF':
+				nameLoL.color = 0xFF0028C8;
+			case 'Sally':
+				nameLoL.color = 0xFF00DDFF;
+			case 'Larry':
+				nameLoL.color = 0xFFBB5A00;
+		}
+
 		if (!dialogueStarted)
 			{
 				startDialogue();

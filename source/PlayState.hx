@@ -196,6 +196,7 @@ class PlayState extends MusicBeatState
 	public var cameraSpeed:Float = 1;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
+	var dialogueRus:Array<String> = ['blah blah blah', 'coolswag'];
 	var dialogueJson:DialogueFile = null;
 	var dialogueEndJson:DialogueFile = null;
 
@@ -1012,6 +1013,11 @@ class PlayState extends MusicBeatState
 		if (OpenFlAssets.exists(file)) {
 			dialogue = CoolUtil.coolTextFile(file);
 		}
+
+		var fileRus:String = Paths.txt(songName + '/' + songName + 'DialogueRus'); //Checks for vanilla/Senpai dialogue
+		if (OpenFlAssets.exists(file)) {
+			dialogueRus = CoolUtil.coolTextFile(fileRus);
+		}
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
@@ -1027,6 +1033,15 @@ class PlayState extends MusicBeatState
 		doof2.finishThing = startCountdown;
 		doof2.nextDialogueThing = startNextDialogue;
 		doof2.skipDialogueThing = skipDialogue;
+
+		var doofRus:DialogueBoxCool = new DialogueBoxCool(false, dialogueRus);
+		// doof.x += 70;
+		// doof.y = FlxG.height * 0.5;
+		doofRus.scrollFactor.set();
+		doofRus.finishThing = startCountdown;
+		doofRus.nextDialogueThing = startNextDialogue;
+		doofRus.skipDialogueThing = skipDialogue;
+
 
 		Conductor.songPosition = -5000;
 
@@ -1323,8 +1338,14 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 				case 'dreams-of-funking' | 'mom-knows-best' | 'together':
-					//startDialogue(dialogueJson);
-					startDialogueCool(doof2);
+					if (ClientPrefs.language == 'English')
+					{	
+						startDialogueCool(doof2);
+					}
+					else
+					{
+						startDialogueCool(doofRus);
+					}
 					
 				default:
 					startCountdown();

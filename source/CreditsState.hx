@@ -100,6 +100,15 @@ class CreditsState extends MusicBeatState
 			['evilsk8r',			'evilsk8r',			"Artist of Friday Night Funkin'",							'https://twitter.com/evilsk8r',			'53E52C'],
 			['kawaisprite',			'kawaisprite',		"Composer of Friday Night Funkin'",							'https://twitter.com/kawaisprite',		'6475F3']
 		];
+
+		if(ClientPrefs.language == "Russian")
+		{	
+			var neptun = ["The NeptooN", 'neptun', 'Cant do english LMAO', '', 'fff38e'];
+			pisspoop.unshift(neptun);
+
+			var yotube = ['YouTuber Help'];
+			pisspoop.unshift(yotube);
+		}
 		
 		for(i in pisspoop){
 			creditsStuff.push(i);

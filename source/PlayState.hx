@@ -1008,15 +1008,19 @@ class PlayState extends MusicBeatState
 		if (OpenFlAssets.exists(file)) {
 			dialogueEndJson = DialogueBoxPsych.parseDialogue(file);
 		}
-
-		var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); //Checks for vanilla/Senpai dialogue
-		if (OpenFlAssets.exists(file)) {
-			dialogue = CoolUtil.coolTextFile(file);
+		if (ClientPrefs.language == "English")
+		{
+			var file:String = Paths.txt(songName + '/' + songName + 'Dialogue'); //Checks for vanilla/Senpai dialogue
+			if (OpenFlAssets.exists(file)) {
+				dialogue = CoolUtil.coolTextFile(file);
+			}
 		}
-
-		var fileRus:String = Paths.txt(songName + '/' + songName + 'DialogueRus'); //Checks for vanilla/Senpai dialogue
-		if (OpenFlAssets.exists(file)) {
-			dialogueRus = CoolUtil.coolTextFile(fileRus);
+		else
+		{
+			var file:String = Paths.txt(songName + '/' + songName + 'DialogueRus'); //Checks for vanilla/Senpai dialogue
+			if (OpenFlAssets.exists(file)) {
+				dialogue = CoolUtil.coolTextFile(file);
+			}
 		}
 		var doof:DialogueBox = new DialogueBox(false, dialogue);
 		// doof.x += 70;
@@ -1034,7 +1038,7 @@ class PlayState extends MusicBeatState
 		doof2.nextDialogueThing = startNextDialogue;
 		doof2.skipDialogueThing = skipDialogue;
 
-		var doofRus:DialogueBoxCool = new DialogueBoxCool(false, dialogueRus);
+		var doofRus:DialogueBoxCool = new DialogueBoxCool(false, dialogue);
 		// doof.x += 70;
 		// doof.y = FlxG.height * 0.5;
 		doofRus.scrollFactor.set();
@@ -1338,14 +1342,10 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 				case 'dreams-of-funking' | 'mom-knows-best' | 'together':
-					if (ClientPrefs.language == 'English')
-					{	
-						startDialogueCool(doof2);
-					}
-					else
-					{
-						startDialogueCool(doofRus);
-					}
+						
+					startDialogueCool(doof2);
+					
+					
 					
 				default:
 					startCountdown();

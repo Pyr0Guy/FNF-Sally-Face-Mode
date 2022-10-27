@@ -133,6 +133,17 @@ class DialogueBoxCool extends FlxSpriteGroup
 		dialogue = new Alphabet(0, 80, "", false, true);
 		// dialogue.x = 90;
 		// add(dialogue);
+
+		switch(curCharacter)
+		{
+			case 'BF':
+				nameLoL.color = 0xFF0028C8;
+			case 'Sally':
+				nameLoL.color = 0xFF00DDFF;
+			case 'Larry':
+				nameLoL.color = 0xFFBB5A00;
+		}
+
 	}
 
 	var dialogueOpened:Bool = false;
@@ -157,16 +168,7 @@ class DialogueBoxCool extends FlxSpriteGroup
 		
 		nameLoL.text = curCharacter;
 
-		switch(curCharacter)
-		{
-			case 'BF':
-				nameLoL.color = 0xFF0028C8;
-			case 'Sally':
-				nameLoL.color = 0xFF00DDFF;
-			case 'Larry':
-				nameLoL.color = 0xFFBB5A00;
-		}
-
+		
 		if (!dialogueStarted)
 			{
 				startDialogue();

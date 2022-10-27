@@ -79,7 +79,7 @@
 	<assets path="assets/shared"        library="shared"        exclude="*.ogg" if="web"/>
 	<assets path="assets/shared"        library="shared"        exclude="*.mp3" unless="web"/>
 	
-	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
+	<assets path='example_mods' rename='mods' embed='true' if="MODS_ALLOWED"/>
 	<assets path='plugins' embed='true'/>
 	<assets path='dlls' embed='true'/>
 	<assets path='art/readme.txt' rename='do NOT readme.txt' />

@@ -1,6 +1,7 @@
 {	
 	"titlex":-150,
 	"titley":-100,
+	"titlecenter":false,
 	"startx":100,
 	"starty":576,
 	"gfx":512,

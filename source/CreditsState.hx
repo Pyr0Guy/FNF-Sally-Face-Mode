@@ -85,6 +85,7 @@ class CreditsState extends MusicBeatState
 			['levelcxdeisfail',	    'levelcxdeisfail',	'Deputy Head, Musician',				'https://www.youtube.com/c/levelcxdeisfail',				'fff38e'],
 			['Naisonji',			'naisonji',		  	'Main Artist, Charter, Animatior',	'',																'57b7a6'],
 			['PyroGuy',				'pyroguy',		  	'Main Coder',							'https://www.youtube.com/channel/UCAoXP48PAkYtB0MfTch_yhA',	'aa9683'],
+			['Ruv',				'ruv',		  	'Second Coder',							'https://youtube.com/channel/UC-A1OmEN7_EDKtz_uUQnzGg',	'5996ff'],
 			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],

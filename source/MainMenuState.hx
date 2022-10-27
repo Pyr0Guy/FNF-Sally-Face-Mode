@@ -35,7 +35,7 @@ class MainMenuState extends MusicBeatState
 	
 	var optionShit:Array<String> = [
 		'story_mode',
-		'freeplay',
+		//'freeplay',
 		'options',
 		'credits'
 	];
@@ -253,7 +253,8 @@ class MainMenuState extends MusicBeatState
 
 										//MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
-										MusicBeatState.switchState(new FreeplayState());
+										//MusicBeatState.switchState(new FreeplayState());
+										//FlxG.sound.play(Paths.sound('cancelMenu'));
 									#if MODS_ALLOWED
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());

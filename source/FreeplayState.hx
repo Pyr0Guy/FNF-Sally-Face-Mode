@@ -270,8 +270,6 @@ class FreeplayState extends MusicBeatState
 	{
 		super.update(elapsed);
 
-		
-
 		backdrops.x -= .25*(elapsed/(1/120));
 		backdrops.y += .25*(elapsed/(1/120));
 
@@ -502,10 +500,6 @@ class FreeplayState extends MusicBeatState
 
 		if (curSelected >= songs.length)
 			curSelected = 0;
-
-		
-		
-		
 
 		#if !switch
 		intendedScore = Highscore.getScore(songs[curSelected].songName, curDifficulty);

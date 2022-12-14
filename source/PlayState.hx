@@ -1,5 +1,6 @@
 package;
 
+import haxe.macro.Expr.Case;
 import flixel.graphics.FlxGraphic;
 #if desktop
 import Discord.DiscordClient;
@@ -500,7 +501,29 @@ class PlayState extends MusicBeatState
 				huina.antialiasing = ClientPrefs.globalAntialiasing;
 				add(huina);
 
-				
+			case 'mental':	//для Singular Mental
+			    GameOverSubstate.characterName = 'bf-sf';
+
+				var bgMentalP:Array<Float> 		= getCords('bgMental');
+				var lightMentalP:Array<Float> 		= getCords('lightMental');
+
+
+				var bgMental:BGSprite = new BGSprite('mental/bgMental', bgMentalP[0], bgMentalP[1], 1.05, 1.0);
+				bgMental.updateHitbox();
+				bgMental.antialiasing = ClientPrefs.globalAntialiasing;
+				bgMental.scale.set(1.3, 1.1);
+				add(bgMental);
+
+				var lightMental:BGSprite = new BGSprite('mental/lightMental', lightMentalP[0], lightMentalP[1], 1.0, 1.0);
+				lightMental.updateHitbox();
+				lightMental.antialiasing = ClientPrefs.globalAntialiasing;
+				lightMental.alpha = 0.5;
+				add(lightMental);
+
+
+
+
+
 
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);

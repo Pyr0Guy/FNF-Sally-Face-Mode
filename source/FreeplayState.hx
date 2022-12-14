@@ -146,8 +146,7 @@ class FreeplayState extends MusicBeatState
 					addWeek(['together'], 3, ['larry']);
 					addWeek(['singular'], 3, ['sally']);
 				case 'errect':
-					addWeek(['dreams-of-funking'], 1, ['sally']);
-					addWeek(['mom-knows-best'], 5, ['larry']);
+					addWeek(['singular-mental'], 3, ['larry']);
 			}
 		}
 

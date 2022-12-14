@@ -502,9 +502,9 @@ class PlayState extends MusicBeatState
 				add(huina);
 
 			case 'mental':	//для Singular Mental
-			    GameOverSubstate.characterName = 'bf-sf';
+			    GameOverSubstate.characterName = 'sally-death';
 
-				var bgMentalP:Array<Float> 		= getCords('bgMental');
+				var bgMentalP:Array<Float> 			= getCords('bgMental');
 				var lightMentalP:Array<Float> 		= getCords('lightMental');
 
 
@@ -517,13 +517,9 @@ class PlayState extends MusicBeatState
 				var lightMental:BGSprite = new BGSprite('mental/lightMental', lightMentalP[0], lightMentalP[1], 1.0, 1.0);
 				lightMental.updateHitbox();
 				lightMental.antialiasing = ClientPrefs.globalAntialiasing;
+				lightMental.blend = ADD;
 				lightMental.alpha = 0.5;
 				add(lightMental);
-
-
-
-
-
 
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);

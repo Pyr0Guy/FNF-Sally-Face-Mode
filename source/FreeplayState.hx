@@ -1,6 +1,7 @@
 package;
 
 import flixel.util.FlxTimer;
+import flixel.input.keyboard.FlxKey;
 import flixel.tweens.FlxEase;
 import flash.text.TextField;
 import flixel.FlxG;
@@ -61,6 +62,10 @@ class FreeplayState extends MusicBeatState
 	var seksName:String;
 	public var emptySHIT:FlxSprite;
 
+
+	var nbg_songs:FlxSprite;
+	var split:FlxSprite;
+	var ebg_songs:FlxSprite;
 	var n_songs:FlxSprite;
 	var e_songs:FlxSprite;
 
@@ -100,23 +105,43 @@ class FreeplayState extends MusicBeatState
 		backdrops.x -= 35;
 		//add(backdrops);
 
-		n_songs = new FlxSprite();
-		n_songs.frames = Paths.getSparrowAtlas('freeplayStaff/n-songs');
-		n_songs.animation.addByPrefix('idle', "n-songs idle", 24, false);
-		n_songs.animation.addByPrefix('select', "n-songs select", 24, false);
+		
+
+		nbg_songs = new FlxSprite(-140,0).loadGraphic(Paths.image('freeplayStaff/n-bg'));
+		nbg_songs.antialiasing = ClientPrefs.globalAntialiasing;
+		add(nbg_songs);
+
+		n_songs = new FlxSprite(-100,0);
+		n_songs.frames = Paths.getSparrowAtlas('freeplayStaff/regular');
+		n_songs.animation.addByPrefix('idle', "regular idle", 24, false);
+		n_songs.animation.addByPrefix('select', "regular selected", 24, false);
 		n_songs.animation.play('idle', true);
 		n_songs.antialiasing = ClientPrefs.globalAntialiasing;
 		n_songs.updateHitbox();
 		add(n_songs);
 
-		e_songs = new FlxSprite(n_songs.width - 200, 0);
-		e_songs.frames = Paths.getSparrowAtlas('freeplayStaff/e-songs');
-		e_songs.animation.addByPrefix('idle', "e-songs idle", 24, false);
-		e_songs.animation.addByPrefix('select', "e-songs select", 24, false);
+		ebg_songs = new FlxSprite(-140,0).loadGraphic(Paths.image('freeplayStaff/m-bg'));
+		ebg_songs.scale.set(1.2, 1.0);
+		ebg_songs.antialiasing = ClientPrefs.globalAntialiasing;
+		add(ebg_songs);
+
+		e_songs = new FlxSprite(-100, 0);
+		e_songs.frames = Paths.getSparrowAtlas('freeplayStaff/mental');
+		e_songs.animation.addByPrefix('idle', "mental idle", 24, false);
+		e_songs.animation.addByPrefix('select', "mental selected", 24, false);
 		e_songs.animation.play('idle', true);
 		e_songs.antialiasing = ClientPrefs.globalAntialiasing;
 		e_songs.updateHitbox();
 		add(e_songs);
+
+
+
+		//split это полоска посредине
+		split = new FlxSprite(-140,0).loadGraphic(Paths.image('freeplayStaff/split'));
+		split.antialiasing = ClientPrefs.globalAntialiasing;
+		split.updateHitbox();
+		add(split);
+
 
 		//CurrentSongIcon = new FlxSprite(0,0).loadGraphic(Paths.image('freeplay/freeplay_' + (AllPossibleSongs[CurrentPack].toLowerCase())));
 
@@ -221,24 +246,43 @@ class FreeplayState extends MusicBeatState
 	{
 		CurrentPack += change;
 		if (CurrentPack == -1)
+
 		{
 			CurrentPack = AllPossibleSongs.length - 1;
+			
+			
 		}
 		if (CurrentPack == AllPossibleSongs.length)
 		{
 			CurrentPack = 0;
+			
+			
 		}
 		//CurrentSongIcon.loadGraphic(Paths.image('freeplay/freeplay_' + (AllPossibleSongs[CurrentPack].toLowerCase())));
 	
 		if (CurrentPack == 0)
 		{
 			e_songs.color = 0xFF565656;
+			ebg_songs.color = 0xFF565656;
 			n_songs.color = 0xFFFFFFFF;
+			nbg_songs.color = 0xFFFFFFFF;
+			FlxTween.tween(nbg_songs, {x: 0}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(ebg_songs, {x: 0}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(n_songs, {x: 80}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(e_songs, {x: 80}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(split, {x:0}, 0.5, {ease: FlxEase.cubeIn});
 		}
 		if (CurrentPack == 1)
 		{
 			n_songs.color = 0xFF565656;
+			nbg_songs.color = 0xFF565656;
 			e_songs.color = 0xFFFFFFFF;
+			ebg_songs.color = 0xFFFFFFFF;
+			FlxTween.tween(nbg_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(ebg_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(n_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(e_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(split, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
 		}
 	}
 
@@ -278,11 +322,13 @@ class FreeplayState extends MusicBeatState
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				UpdatePackSelection(-1);
+				
 			}
 			if (controls.UI_RIGHT_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
 				UpdatePackSelection(1);
+				
 			}
 			if (controls.ACCEPT && !loadingPack)
 			{

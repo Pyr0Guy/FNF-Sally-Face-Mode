@@ -514,10 +514,11 @@ class PlayState extends MusicBeatState
 				bgMental.scale.set(1.3, 1.1);
 				add(bgMental);
 
-				var lightMental:BGSprite = new BGSprite('mental/lightMental', lightMentalP[0], lightMentalP[1], 1.0, 1.0);
+				var lightMental:BGSprite = new BGSprite('mental/lightMental', lightMentalP[0], lightMentalP[1], 1.05, 1.0);
 				lightMental.updateHitbox();
 				lightMental.antialiasing = ClientPrefs.globalAntialiasing;
 				lightMental.blend = ADD;
+				lightMental.scale.set(1.2, 1.0);
 				lightMental.alpha = 0.5;
 				add(lightMental);
 
@@ -4894,6 +4895,19 @@ class PlayState extends MusicBeatState
 		{
 			dad2.dance();
 		}
+
+		if (curSong == 'singular-mental')
+			{
+				switch (curBeat)
+				{
+					case 312:
+						defaultCamZoom = 0.80;
+	
+					case 372:
+						defaultCamZoom = 0.65;
+	
+				}
+			}
 
 		switch (curStage)
 		{

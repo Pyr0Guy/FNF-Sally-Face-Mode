@@ -347,6 +347,9 @@ class FreeplayState extends MusicBeatState
 				new FlxTimer().start(1.5, function(Dumbshit:FlxTimer)
 				{
 					FlxTween.tween(n_songs, {x: -920}, 1.1, {ease: FlxEase.cubeIn});
+					FlxTween.tween(nbg_songs, {x: -920}, 1.1, {ease: FlxEase.cubeIn});
+					FlxTween.tween(split, {x: -920}, 1.1, {ease: FlxEase.cubeIn});
+					FlxTween.tween(ebg_songs, {x: 1280}, 1.1, {ease: FlxEase.cubeIn});
 					FlxTween.tween(e_songs, {x: 1280}, 1.1, {ease: FlxEase.cubeIn, onComplete:
 						function (twn:FlxTween)
 						{

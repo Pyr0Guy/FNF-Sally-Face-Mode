@@ -244,7 +244,7 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										
+										//PlayState.isStoryMode = true; //Вылетает пидр
 										PlayState.storyPlaylist = ['dreams-of-funking', 'mom-knows-best', 'together'];
 										PlayState.ses = 1;
 										PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase(), PlayState.storyPlaylist[0].toLowerCase());

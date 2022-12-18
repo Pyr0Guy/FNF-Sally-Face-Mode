@@ -231,7 +231,7 @@ class PlayState extends MusicBeatState
 	var santa:BGSprite;
 	var heyTimer:Float;
 
-	var cat:FlxSprite;
+	var cat:BGSprite;
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
@@ -482,14 +482,9 @@ class PlayState extends MusicBeatState
 				someStaff.antialiasing = ClientPrefs.globalAntialiasing;
 				add(someStaff);
 
-				cat = new FlxSprite(400, 250);
-				cat.frames = Paths.getSparrowAtlas('characters/Gizmo_assets','shared');
-				cat.animation.addByPrefix('shit', "Gizmo Dancing Beat", 24, false);
-				cat.antialiasing = ClientPrefs.globalAntialiasing;
-				//cat.scrollFactor.set(1.0, 1.0);
+				cat = new BGSprite('Gizmo_assets' , 400, 250, 0.9, 0.9, ['Gizmo Dancing Beat'], true); //MИСТЕР БИСТ???!??!?!?!??!!?
 				cat.updateHitbox();
 				add(cat);
-				
 
 				var provod:BGSprite = new BGSprite('undeground/fg-provod', provodP[0], provodP[1],  1.3, 1.3);
 				provod.updateHitbox();
@@ -506,7 +501,6 @@ class PlayState extends MusicBeatState
 
 				var bgMentalP:Array<Float> 			= getCords('bgMental');
 				var lightMentalP:Array<Float> 		= getCords('lightMental');
-
 
 				var bgMental:BGSprite = new BGSprite('mental/bgMental', bgMentalP[0], bgMentalP[1], 1.05, 1.0);
 				bgMental.updateHitbox();
@@ -1206,8 +1200,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.xAdd = -4;
 		healthBarBG.yAdd = -4;
 
-		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,
-			'health', 0, 2);
+		healthBar = new FlxBar(healthBarBG.x + 4, healthBarBG.y + 4, RIGHT_TO_LEFT, Std.int(healthBarBG.width - 8), Std.int(healthBarBG.height - 8), this,'health', 0, 2);
 		healthBar.scrollFactor.set();
 		// healthBar
 		healthBar.visible = !ClientPrefs.hideHud;
@@ -4912,8 +4905,8 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
-			case 'podval':
-				cat.animation.play('shit', true);
+			//case 'podval':
+		//cat.animation.play('shit', true);
 
 			case 'tank':
 				if(!ClientPrefs.lowQuality) tankWatchtower.dance();

@@ -262,11 +262,11 @@ class FreeplayState extends MusicBeatState
 			ebg_songs.color = 0xFF565656;
 			n_songs.color = 0xFFFFFFFF;
 			nbg_songs.color = 0xFFFFFFFF;
-			FlxTween.tween(nbg_songs, {x: 0}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(ebg_songs, {x: 0}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(n_songs, {x: 80}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(e_songs, {x: 80}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(split, {x:0}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(nbg_songs, {x: 0}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(ebg_songs, {x: 0}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(n_songs, {x: 80}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(e_songs, {x: 80}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(split, {x:0}, 0.5, {ease: FlxEase.linear});
 		}
 		if (CurrentPack == 1)
 		{
@@ -274,11 +274,11 @@ class FreeplayState extends MusicBeatState
 			nbg_songs.color = 0xFF565656;
 			e_songs.color = 0xFFFFFFFF;
 			ebg_songs.color = 0xFFFFFFFF;
-			FlxTween.tween(nbg_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(ebg_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(n_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(e_songs, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
-			FlxTween.tween(split, {x: -280}, 0.5, {ease: FlxEase.cubeIn});
+			FlxTween.tween(nbg_songs, {x: -280}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(ebg_songs, {x: -280}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(n_songs, {x: -280}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(e_songs, {x: -280}, 0.5, {ease: FlxEase.linear});
+			FlxTween.tween(split, {x: -280}, 0.5, {ease: FlxEase.linear});
 		}
 	}
 

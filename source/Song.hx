@@ -46,7 +46,7 @@ class Song
 
 	public var player1:String = 'bf';
 	public var player2:String = 'dad';
-	public var player3:String = 'gf'; //deprecated
+	public var player3:String = 'nogf'; //deprecated
 	public var gfVersion:String = 'gf';
 
 	private static function onLoadJson(songJson:SwagSong) // Convert old charts to newest format
@@ -54,7 +54,7 @@ class Song
 		if(songJson.gfVersion == null)
 		{
 			songJson.gfVersion = songJson.player3;
-			songJson.player3 = null;
+			songJson.player3 = 'nogf';
 		}
 
 		if(songJson.events == null)

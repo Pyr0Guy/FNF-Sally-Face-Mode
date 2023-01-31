@@ -99,6 +99,14 @@ class FreeplayState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 
+		backdrops = new FlxBackdrop(Paths.image('freeplay/grid'), 0.2, 0.2, true, true);
+		backdrops.alpha = 0.1;
+		backdrops.x -= 35;
+		//add(backdrops);
+
+		
+
+
 		nbg_songs = new FlxSprite(-140,0).loadGraphic(Paths.image('freeplayStaff/n-bg'));
 		nbg_songs.antialiasing = ClientPrefs.globalAntialiasing;
 		add(nbg_songs);
@@ -453,7 +461,11 @@ class FreeplayState extends MusicBeatState
 	{
 		var songLowercase:String = Paths.formatToSongPath(songs[curSelected].songName);
 		var poop:String = Highscore.formatSong(songLowercase, curDifficulty);
+		#if MODS_ALLOWED
+		if(!sys.FileSystem.exists(Paths.modsJson(songLowercase + '/' + poop)) && !sys.FileSystem.exists(Paths.json(songLowercase + '/' + poop))) {
+		#else
 		if(!OpenFlAssets.exists(Paths.json(songLowercase + '/' + poop))) {
+			#end
 			poop = songLowercase;
 			curDifficulty = 1;
 			trace('Couldnt find file');

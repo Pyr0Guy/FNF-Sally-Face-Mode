@@ -91,7 +91,7 @@ class CreditsState extends MusicBeatState
 			['Darkus',				'darkus',		  	'Artist',							'https://www.youtube.com/@DaRk_us',	'0000CD'],
 			['PetrovK',				'petrovk',		  	'Artist',							'https://vk.com/petrovk2005',	'00BFFF'],
 			['Kuznec',				'kuznec',		  	'Multitool',							'https://youtube.com/@ku3nec808',	'00FF00'],
-			['Pivozavrik',				'pivozavrik',		  	'Artist, Animator',							'',	'FFC0CB'],
+			['Pivozavrik',				'pivozavrik',		  	'Artist, Animator',							'https://twitter.com/PivozavrikSay?s=09',	'FFC0CB'],
 			['Rinzler',				'danya',		  	'Multitool',							'https://youtube.com/@RinzButterDog',	'00FF00'],
 			['ReallyNotPico',				'reallynotpico',		  	'Musician',							'https://www.youtube.com/channel/UCiMiTKwJS-P_sm1pspbv9sg',	'E50000'],
 			['Bitt',				'bitt',		  	'Charter',							'',	'C7D0CC'],

@@ -82,11 +82,21 @@ class CreditsState extends MusicBeatState
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Funkin Lobby Team'],
+			['Limb0rmx',				'limbo',		  	'Director, multitool',							'https://www.youtube.com/@limb0rmx',	'FFA500'],
 			['levelcxdeisfail',	    'levelcxdeisfail',	'Deputy Head, Musician',				'https://www.youtube.com/c/levelcxdeisfail',				'fff38e'],
 			['Naisonji',			'naisonji',		  	'Main Artist, Charter, Animatior',	'',																'57b7a6'],
 			['PyroGuy',				'pyroguy',		  	'Main Coder',							'https://www.youtube.com/channel/UCAoXP48PAkYtB0MfTch_yhA',	'aa9683'],
-			['Ruv',				'ruv',		  	'Second Coder',							'https://youtube.com/channel/UC-A1OmEN7_EDKtz_uUQnzGg',	'5996ff'],
-			['Bochka220',				'bochka',		  	'Coder, Charter',							'https://www.youtube.com/channel/UC0GSda8Ju4ibXvywD8_pnMw',	'C7D0CC'],
+			['Bochka220',				'bochka',		  	'Second Coder, Charter',							'https://www.youtube.com/channel/UC0GSda8Ju4ibXvywD8_pnMw',	'C7D0CC'],
+			['TarnSpill',				'tarnspill',		  	'charter',							'https://www.youtube.com/@tarnspill3151',	'BA55D3'],
+			['Darkus',				'darkus',		  	'Artist',							'https://www.youtube.com/@DaRk_us',	'0000CD'],
+			['PetrovK',				'petrovk',		  	'Artist',							'https://vk.com/petrovk2005',	'00BFFF'],
+			['Kuznec',				'kuznec',		  	'Multitool',							'https://youtube.com/@ku3nec808',	'00FF00'],
+			['Pivozavrik',				'pivozavrik',		  	'Artist, Animator',							'',	'FFC0CB'],
+			['Rinzler',				'danya',		  	'Multitool',							'https://youtube.com/@RinzButterDog',	'00FF00'],
+			['ReallyNotPico',				'reallynotpico',		  	'Musician',							'https://www.youtube.com/channel/UCiMiTKwJS-P_sm1pspbv9sg',	'E50000'],
+			['Bitt',				'bitt',		  	'Charter',							'',	'C7D0CC'],
+
+	
 			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',							'https://twitter.com/Shadow_Mario_',	'444444'],
